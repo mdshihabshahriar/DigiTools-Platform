@@ -2,6 +2,7 @@ import React from 'react';
 
 const Main = () => {
     return (
+        <div>
         <div className='flex justify-around bg-linear-to-r from-[#4F39F6]  to-[#9514FA] p-10'>
             <div className='text-center space-y-3'>
                 <h1 className='font-extrabold text-7xl text-white'>50K+</h1>
@@ -15,6 +16,11 @@ const Main = () => {
                 <h1 className='font-extrabold text-7xl text-white'>4.9</h1>
                 <p className='font-medium text-xl text-white'>Rating</p>
             </div>
+        </div>
+        <div className='w-11/12 mx-auto mt-30 flex flex-col items-center text-center space-y-5'>
+            <h2 className='font-extrabold text-5xl'>Premium Digital Tools</h2>
+            <p className='text-[16px]'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
+        </div>
         </div>
     );
 };
