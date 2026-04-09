@@ -4,6 +4,9 @@ import Banner from './components/Banner'
 import Main from './components/Main'
 import Models from './components/Models'
 import Navbar from './components/Navbar'
+import GetStarted from './components/GetStarted'
+import Pricing from './components/Pricing'
+import Workflow from './components/Workflow'
 
 const getModels = async () => {
     const res = await fetch('/models.json')
@@ -31,6 +34,12 @@ function App() {
       </div>
 
       <Models modelPromise={modelPromise} />
+
+      <GetStarted />
+
+      <Pricing />
+
+      <Workflow />
 
     </>
   )
