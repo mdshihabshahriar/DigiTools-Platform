@@ -2,10 +2,11 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className="navbar border-b border-gray-300 bg-white shadow-sm">
+        <div className='border-b border-gray-300 shadow-sm'>
+        <div className="navbar bg-white w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="">
-                    <span className="bg-linear-to-r from-[#4F39F6]  to-[#9514FA] bg-clip-text text-transparent text-2xl font-bold ml-20">DigiTools</span>
+                    <span className="bg-linear-to-r from-[#4F39F6]  to-[#9514FA] bg-clip-text text-transparent text-2xl font-bold">DigiTools</span>
                 </div>
             </div>
             <div className="navbar-center hidden md:flex">
@@ -30,8 +31,9 @@ const Navbar = () => {
             <div className="navbar-end gap-5">
                 <img className='w-4 h-4 cursor-pointer' src="/src/assets/products/shopping-cart.png" alt="" />
                 <a href="" className='text-lg font-semibold'>Login</a>
-                <a className="btn bg-linear-to-r from-[#4F39F6]  to-[#9514FA] rounded-full text-white mr-20">Get Started</a>
+                <a className="btn bg-linear-to-r from-[#4F39F6]  to-[#9514FA] rounded-full text-white">Get Started</a>
             </div>
+        </div>
         </div>
     );
 };
