@@ -4,7 +4,7 @@ A modern digital marketplace built with React where users can browse, add to car
 
 ## 🌐 Live Demo
 
-[DigiTools Live](https://your-deployment-url.com)
+[DigiTools Live](https://digitools-0.netlify.app/)
 
 ---
 
