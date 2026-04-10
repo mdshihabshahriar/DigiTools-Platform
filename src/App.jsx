@@ -8,13 +8,14 @@ import GetStarted from './components/GetStarted'
 import Pricing from './components/Pricing'
 import Workflow from './components/Workflow'
 import Footer from './components/Footer'
+import Cart from './components/Cart'
 
 const getModels = async () => {
     const res = await fetch('/models.json')
     return res.json()
   }
 
-  const modelPromise = getModels()
+const modelPromise = getModels()
 
 function App() {
 
@@ -30,11 +31,13 @@ function App() {
       <Main />
 
       <div className="tabs tabs-box justify-center bg-transparent mt-4">
-        <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 font-bold ${activeTab === "model" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label="Models" onClick={()=>{setActiveTab("model")}} defaultChecked/>
-        <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 font-bold ${activeTab === "cart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label={`Cart (${carts.length})`} onClick={()=>{setActiveTab("cart")}}/>
+        <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 font-bold shadow-xl ${activeTab === "model" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label="Models" onClick={()=>{setActiveTab("model")}} defaultChecked/>
+        <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 font-bold shadow-xl ${activeTab === "cart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label={`Cart (${carts.length})`} onClick={()=>{setActiveTab("cart")}}/>
       </div>
 
-      <Models modelPromise={modelPromise} />
+      {activeTab === "model" ? <Models modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Models> : null}
+
+      {activeTab === "cart" ? <Cart carts={carts} setCarts={setCarts}></Cart> : null}
 
       <GetStarted />
 

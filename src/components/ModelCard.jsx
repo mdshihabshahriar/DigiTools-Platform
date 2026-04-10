@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TiTick } from 'react-icons/ti';
+import { toast } from 'react-toastify';
 
-const ModelCard = ({ model }) => {
+const ModelCard = ({ model, carts, setCarts }) => {
+    const [isBuy, setBuy] = useState(false)
+    const handleBuy = ()=>{
+        setBuy(true)
+        const alreadyAdded = carts.find(cartItem => cartItem.id === model.id)
+        if(alreadyAdded){
+            toast.error(`${model.name} is already in the cart!`)
+            return
+        }
+        setCarts([...carts, model])
+        toast.success(`${model.name} added to cart!`)
+    }
     return (
         <div className='border border-gray-100 rounded-xl shadow-sm p-6 space-y-4 relative'>
              <span className={`absolute top-4 right-4 text-[14px] px-3 py-1 rounded-full font-medium
@@ -23,7 +35,12 @@ const ModelCard = ({ model }) => {
                     </li>
                 ))}
             </ul>
-            <button className='btn bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white w-full rounded-xl'>Buy Now</button>
+            <button onClick={handleBuy} className={`btn to-[#9514FA] text-white w-full rounded-xl ${
+                isBuy 
+                ? 'bg-green-500' 
+                : 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'
+                }`}>
+                {isBuy ? 'Added to Cart' : 'Buy Now'}</button>
         </div>
     );
 };
