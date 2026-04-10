@@ -15,7 +15,7 @@ const ModelCard = ({ model, carts, setCarts }) => {
         toast.success(`${model.name} added to cart!`)
     }
     return (
-        <div className='border border-gray-100 rounded-xl shadow-sm p-6 space-y-4 relative'>
+        <div className='border border-gray-100 rounded-xl shadow-sm p-6 space-y-4 relative transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer'>
              <span className={`absolute top-4 right-4 text-[14px] px-3 py-1 rounded-full font-medium
                 ${model.tag === 'Popular' ? 'bg-purple-100 text-purple-600' : 
                 model.tag === 'New' ? 'bg-green-100 text-green-600' :

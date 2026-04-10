@@ -24,15 +24,15 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar carts={carts} />
 
       <Banner />
 
       <Main />
 
       <div className="tabs tabs-box justify-center bg-transparent mt-4">
-        <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 font-bold shadow-xl ${activeTab === "model" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label="Models" onClick={()=>{setActiveTab("model")}} defaultChecked/>
-        <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 font-bold shadow-xl ${activeTab === "cart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label={`Cart (${carts.length})`} onClick={()=>{setActiveTab("cart")}}/>
+        <input type="radio" name="my_tabs_1" className={`tab rounded-l-full w-40 font-bold shadow-xl ${activeTab === "model" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label="Products" onClick={()=>{setActiveTab("model")}} defaultChecked/>
+        <input type="radio" name="my_tabs_1" className={`tab rounded-r-full w-40 font-bold shadow-xl ${activeTab === "cart" ? "bg-linear-to-r from-[#4F39F6]  to-[#9514FA] text-white" : "bg-transparent"}`} aria-label={`Cart (${carts.length})`} onClick={()=>{setActiveTab("cart")}}/>
       </div>
 
       {activeTab === "model" ? <Models modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Models> : null}

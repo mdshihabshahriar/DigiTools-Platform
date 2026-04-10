@@ -17,7 +17,7 @@ const Cart = ({ carts, setCarts}) => {
         <div className='mt-10 p-10 max-w-7xl mx-auto border border-gray-200 rounded-lg shadow-sm'>
             <h1 className='text-2xl font-bold'>Your Cart</h1>
             {
-                carts.length === 0 ? <p className='text-center text-2xl p-5'>Cart is empty</p> :
+                carts.length === 0 ?<div className='flex flex-col items-center'> <img className='w-10' src="https://cdn-icons-png.flaticon.com/512/649/649931.png" alt="" /> <p className='text-center text-2xl p-5 text-gray-500'>Your Cart is empty</p> </div>:
                 <>
                     <div className='space-y-5 mt-4'>
                 {

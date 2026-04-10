@@ -2,9 +2,9 @@ import React from 'react';
 
 const Workflow = () => {
     return (
-        <div className='flex flex-col justify-center items-center space-y-6 bg-linear-to-r from-[#4F39F6]  to-[#9514FA] p-30 mt-30'>
-            <div>
-                <h2 className='font-extrabold text-[40px] text-white'>Ready to Transform Your Workflow?</h2>
+        <div className='flex flex-col justify-center items-center space-y-6 bg-linear-to-r from-[#4F39F6]  to-[#9514FA] p-10 md:p-30 mt-30 text-center'>
+            <div className='space-y-2'>
+                <h2 className='font-extrabold text-3xl md:text-[40px] text-white'>Ready to Transform Your Workflow?</h2>
                 <p className='text-[16px] text-white text-center'>Join thousands of professionals who are already using Digitools to work smarter. <br /> Start your free trial today.</p>
             </div>
             <div className='space-x-4'>
