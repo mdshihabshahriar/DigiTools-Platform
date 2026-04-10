@@ -1,4 +1,7 @@
 import React from 'react';
+import instagram from '../assets/instagram.png';
+import facebook from '../assets/Facebook.png';
+import twitter from '../assets/fi_5968958.png';
 
 const Footer = () => {
     return (
@@ -34,9 +37,9 @@ const Footer = () => {
             <nav className='text-white'>
                 <h6 className="footer-title">Social Links</h6>
                 <div className='flex gap-4'>
-                    <img className='bg-white rounded-full p-1' src="/src/assets/instagram.png" alt="" /> 
-                    <img className='bg-white rounded-full p-1' src="/src/assets/Facebook.png" alt="" />
-                    <img className='bg-white rounded-full p-1' src="/src/assets/fi_5968958.png" alt="" />
+                    <img className='bg-white rounded-full p-1' src={instagram} alt="" /> 
+                    <img className='bg-white rounded-full p-1' src={facebook} alt="" />
+                    <img className='bg-white rounded-full p-1' src={twitter} alt="" />
                 </div>
             </nav>
             </footer>
